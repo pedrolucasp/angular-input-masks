@@ -1,12 +1,12 @@
 {
   "name": "angular-input-masks-extended",
-  "version": "2.5.1",
   "description": "Personalized input masks for AngularJS (Extended)",
+  "version": "2.6.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/pedrolucasp/angular-input-masks.git"
   },
-  "homepage": "http://github.com/assisrafael/angular-input-masks",
+  "homepage": "http://github.com/pedrolucasp/angular-input-masks",
   "scripts": {
     "lint": "eslint *.js src/ config/ --fix",
     "test:unit": "karma start config/karma.conf.js --single-run",
@@ -23,7 +23,7 @@
     "mask",
     "angularjs"
   ],
-  "author": "igor.rafael@gmail.com",
+  "author": "pedrolucasporcellis@gmail.com",
   "license": "MIT",
   "dependencies": {
     "br-validations": "^0.2.4",
