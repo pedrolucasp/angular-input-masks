@@ -3,22 +3,22 @@
 /*global inject*/
 
 var TestUtil = {
-	compile: function(html, initialScope) {
-		var container;
+	                    compile: function(html, initialScope) {
+		                    var container;
 
-		inject(function($compile, $rootScope) {
-			if (angular.isDefined(initialScope)) {
-				angular.extend($rootScope, initialScope);
-			}
+		                    inject(function($compile, $rootScope) {
+			                    if (angular.isDefined(initialScope)) {
+				                    angular.extend($rootScope, initialScope);
+                    }
 
-			container = $compile(html)($rootScope);
-			$rootScope.$apply();
-		});
+			                    container = $compile(html)($rootScope);
+			                    $rootScope.$apply();
+                    });
 
-		return container;
-	}
+		                    return container;
+                    }
 };
 
 if (module) {
-	module.exports = TestUtil;
+	                    module.exports = TestUtil;
 }
