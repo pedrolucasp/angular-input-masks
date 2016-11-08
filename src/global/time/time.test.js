@@ -40,6 +40,24 @@ describe('ui-time-mask', function() {
     expect(model.$viewValue).toBe('14:26');
   });
 
+  it('should fix values over default hour/minute/second model', function() {
+    var input = TestUtil.compile('<input ng-model="model" ui-time-mask>', {
+      model: '348665'
+    });
+
+    var model = input.controller('ngModel');
+    expect(model.$viewValue).toBe('24:60:60');
+  });
+
+  it('should fix values over default hour/minute/second model (short mode)', function() {
+    var input = TestUtil.compile('<input ng-model="model" ui-time-mask="short">', {
+      model: '348665'
+    });
+
+    var model = input.controller('ngModel');
+    expect(model.$viewValue).toBe('24:60');
+  });
+
   it('should ignore non digits', function() {
     var input = TestUtil.compile('<input ng-model="model" ng-model-options="{allowInvalid:true}" ui-time-mask>');
     var model = input.controller('ngModel');
@@ -49,7 +67,7 @@ describe('ui-time-mask', function() {
     {value:'2-', viewValue:'2', modelValue:'2'},
     {value:'23a', viewValue:'23', modelValue:'23'},
     {value:'23_34', viewValue:'23:34', modelValue:'23:34'},
-    {value:'23346!324', viewValue:'23:34:63', modelValue:'23:34:63'}
+    {value:'23345!024', viewValue:'23:34:50', modelValue:'23:34:50'}
     ];
 
     tests.forEach(function(test) {

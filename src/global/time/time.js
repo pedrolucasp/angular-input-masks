@@ -18,7 +18,14 @@ module.exports = function TimeMaskDirective() {
       var timeMask = new StringMask(timeFormat);
 
       function correctInvalidTimeValue(originalStringValue) {
-        var separatedTimeValues, hours, minutes, seconds;
+        var separatedTimeValues, concatenedTimeValues, hours, minutes, seconds;
+        console.info("------ testing ------");
+        console.debug("originalString: " + originalStringValue);
+        console.info("------- end -------");
+        if (originalStringValue === '') {
+          return originalStringValue;
+        }
+
         separatedTimeValues = originalStringValue.match(/.{1,2}/g);
 
         hours = parseInt(separatedTimeValues[0]);
@@ -37,7 +44,13 @@ module.exports = function TimeMaskDirective() {
           seconds = 60;
         }
 
-        return '' + hours + minutes + seconds;
+        concatenedTimeValues = '' + hours + minutes;
+
+        if (seconds > 0) {
+          concatenedTimeValues += seconds;
+        }
+
+        return concatenedTimeValues;
       }
 
       function formatter(value) {
@@ -49,6 +62,8 @@ module.exports = function TimeMaskDirective() {
 
         cleanValue = value.replace(/[^0-9]/g, '').slice(0, unformattedValueLength) || '';
         correctedValue = correctInvalidTimeValue(cleanValue);
+        console.info("----------####correctedValue------------")
+        console.debug(correctedValue, cleanValue);
 
         return (timeMask.apply(correctedValue) || '').replace(/[^0-9]$/, '');
       }
