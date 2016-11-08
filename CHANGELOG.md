@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.9.3"></a>
+## [2.9.3](https://github.com/pedrolucasp/angular-input-masks/compare/v2.9.2...v2.9.3) (2016-11-08)
+
+
+
 <a name="2.9.2"></a>
 ## [2.9.2](https://github.com/pedrolucasp/angular-input-masks/compare/v2.9.1...v2.9.2) (2016-11-08)
 
