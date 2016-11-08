@@ -29,16 +29,16 @@ module.exports = function TimeMaskDirective() {
         minutes = parseInt(separatedTimeValues[1]);
         seconds = parseInt(separatedTimeValues[2] || 0);
 
-        if (hours > 24) {
-          hours = 24;
+        if (hours > 23) {
+          hours = 23;
         }
 
-        if (minutes > 60) {
-          minutes = 60;
+        if (minutes > 59) {
+          minutes = 59;
         }
 
-        if (seconds > 60) {
-          seconds = 60;
+        if (seconds > 59) {
+          seconds = 59;
         }
 
         concatenedTimeValues = '' + hours + minutes;

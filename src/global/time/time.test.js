@@ -46,7 +46,7 @@ describe('ui-time-mask', function() {
     });
 
     var model = input.controller('ngModel');
-    expect(model.$viewValue).toBe('24:60:60');
+    expect(model.$viewValue).toBe('23:59:59');
   });
 
   it('should fix values over default hour/minute/second model (short mode)', function() {
@@ -55,7 +55,7 @@ describe('ui-time-mask', function() {
     });
 
     var model = input.controller('ngModel');
-    expect(model.$viewValue).toBe('24:60');
+    expect(model.$viewValue).toBe('23:59');
   });
 
   it('should ignore non digits', function() {

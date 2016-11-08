@@ -116,32 +116,6 @@ describe('ui.utils.masks.time', function() {
         expect(valid.getText()).toEqual('{}');
       });
 
-      /*
-      it('should be valid if the model is a valid time', function() {
-        var inputKeysToSend = '267959';
-
-        var input = element(by.model('shortTimeMask')),
-          valid = element(by.binding('form.shortTimeMaskInput.$error'));
-
-        var i;
-        for (i = 0; i < 3; i++) {
-          input.sendKeys(inputKeysToSend.charAt(i));
-          expect(valid.getText()).toEqual('{ "time": true }');
-        }
-
-        input.sendKeys(inputKeysToSend.charAt(3));
-        expect(valid.getText()).toEqual('{}');
-
-        for (i = 3; i > 0; i--) {
-          input.sendKeys(protractor.Key.BACK_SPACE);
-          expect(valid.getText()).toEqual('{ "time": true }');
-        }
-
-        input.sendKeys(protractor.Key.BACK_SPACE);
-        expect(valid.getText()).toEqual('{}');
-      });
-      */
-
     });
   });
 });
