@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.9.0"></a>
+# [2.9.0](https://github.com/pedrolucasp/angular-input-masks/compare/v2.5.0...v2.9.0) (2016-11-08)
+
+
+### Bug Fixes
+
+* **uiNumberMask:** fix numberWithoutGrupoSep spelling ([1a9dacb](https://github.com/pedrolucasp/angular-input-masks/commit/1a9dacb))
+
+
+### Features
+
+* **br-phone-number:** allow numbers without DDD ([8a5c5cd](https://github.com/pedrolucasp/angular-input-masks/commit/8a5c5cd))
+
+
+
 <a name="2.7.0"></a>
 # [2.7.0](https://github.com/pedrolucasp/angular-input-masks/compare/v2.5.0...v2.7.0) (2016-11-08)
 
