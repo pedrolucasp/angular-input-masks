@@ -116,7 +116,7 @@ gulp.task('getVersion', function() {
 });
 
 var bowerConfig = {
-  repository: 'git@github.com:pedrolucasp/bower-angular-input-masks.git',
+  repository: 'https://github.com/pedrolucasp/bower-angular-input-masks.git',
   path: './bower-angular-input-masks'
 };
 

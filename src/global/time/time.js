@@ -19,9 +19,6 @@ module.exports = function TimeMaskDirective() {
 
       function correctInvalidTimeValue(originalStringValue) {
         var separatedTimeValues, concatenedTimeValues, hours, minutes, seconds;
-        console.info("------ testing ------");
-        console.debug("originalString: " + originalStringValue);
-        console.info("------- end -------");
         if (originalStringValue === '') {
           return originalStringValue;
         }
@@ -62,8 +59,6 @@ module.exports = function TimeMaskDirective() {
 
         cleanValue = value.replace(/[^0-9]/g, '').slice(0, unformattedValueLength) || '';
         correctedValue = correctInvalidTimeValue(cleanValue);
-        console.info("----------####correctedValue------------")
-        console.debug(correctedValue, cleanValue);
 
         return (timeMask.apply(correctedValue) || '').replace(/[^0-9]$/, '');
       }
